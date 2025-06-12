@@ -6,6 +6,7 @@
 **Q1. What are Python's key features?**  
 - Interpreted, dynamically typed, object-oriented, open-source, and has extensive libraries.
 
+
 **Q2. What’s the difference between `is` and `==` in Python?**  
 - `==` compares values, `is` checks identity (memory location).
 
@@ -17,49 +18,13 @@ a, b = b, a
 **Q4. What's the difference between a list and a tuple?**  
 - Lists are mutable; tuples are immutable and faster.
 
+
+**Q5. What's the difference between append and extend ?**
+-  Append adds object to the end of list = [1,2,3,[4,5]]
+-  Extend adds individual objects to the list at the end
 ---
 
-## 🧱 Data Structures & Algorithms
 
-**Q5. How do you implement a queue in Python?**
-```python
-from collections import deque
-queue = deque()
-queue.append('a')
-queue.popleft()
-```
-
-**Q6. How to find duplicates in a list?**
-```python
-seen = set()
-dupes = [x for x in lst if x in seen or seen.add(x)]
-```
-
-**Q7. What is a dictionary and how is it used?**  
-- Key-value mapping. Fast lookups using hash tables.
-
-**Q8. How do you sort a dictionary by values?**
-```python
-sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1]))
-```
-
----
-
-## 🔄 Loops & Comprehensions
-
-**Q9. What is a list comprehension?**
-```python
-[x for x in range(10) if x % 2 == 0]
-```
-
-**Q10. What is a generator?**
-```python
-def gen():
-    for i in range(5):
-        yield i
-```
-
----
 
 ## 🗃️ File Handling & Error Handling
 
@@ -99,36 +64,6 @@ df[df['value'] > 100]
 
 ---
 
-## 🧪 Testing & Functions
-
-**Q16. What are *args and **kwargs in Python?**
-```python
-def func(*args, **kwargs):
-    pass
-```
-
-**Q17. What is a lambda function?**
-```python
-square = lambda x: x*x
-```
-
----
-
-## 🧱 Object-Oriented Programming
-
-**Q18. What is inheritance?**
-```python
-class A: pass
-class B(A): pass
-```
-
-**Q19. What is a class method vs static method?**
-```python
-@classmethod def cls_method(cls): pass  
-@staticmethod def static_method(): pass
-```
-
----
 
 ## 🛠️ Advanced Topics for Data Engineering
 

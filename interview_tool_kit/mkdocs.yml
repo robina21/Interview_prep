@@ -1,1 +1,13 @@
-site_name: My interview prep site
+
+site_name: Data Engineering Interview Prep
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Python:
+      - Basics: python_interview.md
+      - Pandas Interview: pandas_interview_questions.md
+  - SQL: sql.md
+  - Projects: projects.md
+  - Real World Interview Questions: actual_interview_questions.md

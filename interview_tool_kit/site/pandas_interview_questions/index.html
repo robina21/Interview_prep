@@ -1,0 +1,805 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../python_interview/">
+      
+      
+        <link rel="next" href="../sql/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Pandas Interview - Data Engineering Interview Prep</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pandas-interview-questions-for-data-engineers-with-explanations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data Engineering Interview Prep" class="md-header__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Engineering Interview Prep
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pandas Interview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data Engineering Interview Prep" class="md-nav__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Engineering Interview Prep
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pandas Interview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas Interview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-loading-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Data Loading &amp; Exploration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧹 Data Cleaning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-sorting-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Filtering, Sorting &amp; Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groupby-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 GroupBy &amp; Aggregation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins-merges" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Joins &amp; Merges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reshaping-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Reshaping Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Optimization &amp; Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-time-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📆 Date &amp; Time Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Real-World Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Interview Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actual_interview_questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real World Interview Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-loading-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Data Loading &amp; Exploration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧹 Data Cleaning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-sorting-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Filtering, Sorting &amp; Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groupby-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 GroupBy &amp; Aggregation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins-merges" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Joins &amp; Merges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reshaping-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Reshaping Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Optimization &amp; Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-time-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📆 Date &amp; Time Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Real-World Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Interview Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pandas-interview-questions-for-data-engineers-with-explanations">Pandas Interview Questions for Data Engineers (with Explanations)</h1>
+<h2 id="data-loading-exploration">📥 Data Loading &amp; Exploration</h2>
+<p><strong>Q1. How do you read a large CSV file in chunks using Pandas?</strong><br />
+Use <code>chunksize</code> to load the file in smaller parts to save memory.</p>
+<pre><code class="language-python">chunks = pd.read_csv('data.csv', chunksize=10000)
+for chunk in chunks:
+    process(chunk)
+</code></pre>
+<p><strong>Q2. How do you get a quick summary of a DataFrame?</strong><br />
+Use <code>info()</code>, <code>describe()</code>, and <code>head()</code> to get structure, statistics, and sample data.</p>
+<pre><code class="language-python">df.info()
+df.describe()
+df.head()
+</code></pre>
+<p><strong>Q3. How do you detect missing values?</strong><br />
+Use <code>isnull().sum()</code> to count nulls per column.</p>
+<pre><code class="language-python">df.isnull().sum()
+</code></pre>
+<hr />
+<h2 id="data-cleaning">🧹 Data Cleaning</h2>
+<p><strong>Q4. How to drop rows with any null values?</strong><br />
+<code>dropna()</code> removes all rows with at least one NaN.</p>
+<pre><code class="language-python">df.dropna()
+</code></pre>
+<p><strong>Q5. How to fill missing values with the median of a column?</strong><br />
+<code>fillna()</code> can fill NaNs with median, mean, or custom values.</p>
+<pre><code class="language-python">df['column'].fillna(df['column'].median(), inplace=True)
+</code></pre>
+<p><strong>Q6. How to convert a column to datetime?</strong><br />
+Use <code>pd.to_datetime()</code> to ensure proper datetime parsing.</p>
+<pre><code class="language-python">df['date'] = pd.to_datetime(df['date'])
+</code></pre>
+<p><strong>Q7. How to remove duplicates from a DataFrame?</strong><br />
+<code>drop_duplicates()</code> keeps the first instance and drops repeated rows.</p>
+<pre><code class="language-python">df.drop_duplicates(inplace=True)
+</code></pre>
+<hr />
+<h2 id="filtering-sorting-mapping">🔍 Filtering, Sorting &amp; Mapping</h2>
+<p><strong>Q8. How to filter rows where salary &gt; 100K and department = 'IT'?</strong><br />
+Use boolean conditions with <code>&amp;</code> for AND logic.</p>
+<pre><code class="language-python">df[(df['salary'] &gt; 100000) &amp; (df['department'] == 'IT')]
+</code></pre>
+<p><strong>Q9. How to apply a function to a column?</strong><br />
+Use <code>apply()</code> to perform row-wise or column-wise transformations.</p>
+<pre><code class="language-python">df['salary_bracket'] = df['salary'].apply(lambda x: 'High' if x &gt; 100000 else 'Low')
+</code></pre>
+<p><strong>Q10. How to sort data by two columns?</strong><br />
+Use <code>sort_values()</code> with <code>ascending</code> flags.</p>
+<pre><code class="language-python">df.sort_values(by=['department', 'salary'], ascending=[True, False])
+</code></pre>
+<hr />
+<h2 id="groupby-aggregation">🔁 GroupBy &amp; Aggregation</h2>
+<p><strong>Q11. How to group by department and calculate average salary?</strong><br />
+<code>groupby()</code> with aggregation helps summarize data.</p>
+<pre><code class="language-python">df.groupby('department')['salary'].mean()
+</code></pre>
+<p><strong>Q12. How to get count and sum in one groupby operation?</strong><br />
+<code>agg()</code> allows multiple aggregations on grouped data.</p>
+<pre><code class="language-python">df.groupby('department').agg({'salary': ['count', 'sum']})
+</code></pre>
+<hr />
+<h2 id="joins-merges">🔗 Joins &amp; Merges</h2>
+<p><strong>Q13. How to perform an inner join on two DataFrames?</strong><br />
+<code>pd.merge()</code> works like SQL JOINs.</p>
+<pre><code class="language-python">pd.merge(df1, df2, on='id', how='inner')
+</code></pre>
+<p><strong>Q14. How to do a left join using different column names?</strong><br />
+You can specify different key names using <code>left_on</code> and <code>right_on</code>.</p>
+<pre><code class="language-python">pd.merge(df1, df2, left_on='emp_id', right_on='id', how='left')
+</code></pre>
+<hr />
+<h2 id="reshaping-data">📏 Reshaping Data</h2>
+<p><strong>Q15. How to pivot a table to summarize data?</strong><br />
+Use <code>pivot_table()</code> to create cross-tabulations.</p>
+<pre><code class="language-python">df.pivot_table(index='department', columns='gender', values='salary', aggfunc='mean')
+</code></pre>
+<p><strong>Q16. How to melt a wide table into a long format?</strong><br />
+<code>melt()</code> is useful for unpivoting columns into rows.</p>
+<pre><code class="language-python">pd.melt(df, id_vars=['id'], var_name='attribute', value_name='value')
+</code></pre>
+<hr />
+<h2 id="optimization-performance">🧠 Optimization &amp; Performance</h2>
+<p><strong>Q17. How do you handle memory issues with large data sets?</strong><br />
+Use <code>dtype</code>, <code>usecols</code>, and <code>chunksize</code> to control memory usage.</p>
+<p><strong>Q18. How to optimize string columns?</strong><br />
+Convert strings to category dtype for better performance.</p>
+<pre><code class="language-python">df['category_column'] = df['category_column'].astype('category')
+</code></pre>
+<hr />
+<h2 id="date-time-operations">📆 Date &amp; Time Operations</h2>
+<p><strong>Q19. How to extract year and month from a datetime column?</strong><br />
+Use <code>dt</code> accessor to break down datetime parts.</p>
+<pre><code class="language-python">df['year'] = df['date'].dt.year
+df['month'] = df['date'].dt.month
+</code></pre>
+<p><strong>Q20. How to calculate the number of days between two dates?</strong><br />
+Subtract datetime columns and use <code>.dt.days</code>.</p>
+<pre><code class="language-python">df['days'] = (df['end_date'] - df['start_date']).dt.days
+</code></pre>
+<hr />
+<h2 id="real-world-case">🧪 Real-World Case</h2>
+<p><strong>Q21. You get a daily CSV dump with millions of rows. How do you deduplicate and load only new records into a database?</strong><br />
+Use chunking, hash comparison, and staging tables to identify new data before loading.</p>
+<p><strong>Q22. How to check for data consistency between two large DataFrames (e.g., source vs target)?</strong><br />
+Compare with <code>.equals()</code> or find differences using <code>concat()</code> and <code>drop_duplicates()</code>.</p>
+<pre><code class="language-python">df1.equals(df2)
+pd.concat([df1, df2]).drop_duplicates(keep=False)
+</code></pre>
+<hr />
+<h2 id="interview-tips">✅ Interview Tips</h2>
+<ul>
+<li>Practice real-world data cleanup and profiling.</li>
+<li>Be fluent in joins, groupby, filtering, and performance tuning.</li>
+<li>Know how to work with large files and time-based operations.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

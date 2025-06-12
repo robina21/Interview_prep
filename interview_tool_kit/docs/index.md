@@ -1,17 +1,6 @@
-# Welcome to MkDocs
+👋 Welcome!
+Hi there! I’m glad you stopped by. This site is your go-to resource to prepare for Data Engineering interviews—from SQL and Python to cloud tools and real-world scenarios.
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+I’m a Data Engineer with 6+ years of experience, and I’ve built and scaled data platforms across industries. Everything here is crafted from hands-on experience and countless interviews—both as a candidate and an interviewer.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Let’s get you interview-ready. 🚀
