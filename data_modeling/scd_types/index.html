@@ -9,22 +9,20 @@
       
       
       
-        <link rel="prev" href="../sql/">
+        <link rel="prev" href="../fact_dimension_tables/">
       
       
-        <link rel="next" href="../actual_interview_questions/">
       
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Projects - Data Engineering Interview Prep</title>
+        <title>Slowly Changing Dimensions (SCDs) - Data Engineering Interview Prep</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
       
       
 
@@ -43,7 +41,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#slowly-changing-dimensions-scds" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +76,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Engineering Interview Prep" class="md-header__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
+    <a href="../.." title="Data Engineering Interview Prep" class="md-header__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -93,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Projects
+              Slowly Changing Dimensions (SCDs)
             
           </span>
         </div>
@@ -171,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Engineering Interview Prep" class="md-nav__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
+    <a href="../.." title="Data Engineering Interview Prep" class="md-nav__button md-logo" aria-label="Data Engineering Interview Prep" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -189,7 +192,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -249,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_interview/" class="md-nav__link">
+      <a href="../../python_interview/" class="md-nav__link">
         
   
   
@@ -272,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pandas_interview_questions/" class="md-nav__link">
+      <a href="../../pandas_interview_questions/" class="md-nav__link">
         
   
   
@@ -302,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/" class="md-nav__link">
+      <a href="../../sql/" class="md-nav__link">
         
   
   
@@ -321,17 +324,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
         
   
   
@@ -342,7 +338,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -354,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../actual_interview_questions/" class="md-nav__link">
+      <a href="../../actual_interview_questions/" class="md-nav__link">
         
   
   
@@ -373,18 +368,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -400,7 +397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Data Modeling
@@ -414,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_modeling/oltp_vs_olap/" class="md-nav__link">
+      <a href="../oltp_vs_olap/" class="md-nav__link">
         
   
   
@@ -437,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_modeling/star_schema/" class="md-nav__link">
+      <a href="../star_schema/" class="md-nav__link">
         
   
   
@@ -460,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_modeling/snowflake_schema/" class="md-nav__link">
+      <a href="../snowflake_schema/" class="md-nav__link">
         
   
   
@@ -483,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_modeling/fact_dimension_tables/" class="md-nav__link">
+      <a href="../fact_dimension_tables/" class="md-nav__link">
         
   
   
@@ -503,10 +500,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../data_modeling/scd_types/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Slowly Changing Dimensions (SCDs)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -517,6 +536,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an SCD?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-scds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of SCDs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of SCDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-1-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟩 Type 1 – Overwrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-2-add-new-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟦 Type 2 – Add New Record
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3-add-new-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟨 Type 3 – Add New Column
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-type-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which Type to Use?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -546,6 +654,85 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an SCD?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-scds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of SCDs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of SCDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-1-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟩 Type 1 – Overwrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-2-add-new-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟦 Type 2 – Add New Record
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3-add-new-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟨 Type 3 – Add New Column
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-type-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which Type to Use?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -561,9 +748,145 @@
 
 
 
-  <h1>Projects</h1>
-
-<p>Work In progress </p>
+<h1 id="slowly-changing-dimensions-scds">Slowly Changing Dimensions (SCDs)</h1>
+<h2 id="what-is-an-scd">What is an SCD?</h2>
+<p>A <strong>Slowly Changing Dimension</strong> tracks how dimension data changes over time.<br />
+For example, when a customer moves to a new city, do we overwrite it or keep history?</p>
+<hr />
+<h2 id="types-of-scds">Types of SCDs</h2>
+<h3 id="type-1-overwrite">🟩 Type 1 – Overwrite</h3>
+<p>Old data is replaced by new data.</p>
+<table>
+<thead>
+<tr>
+<th>customer_key</th>
+<th>name</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>501</td>
+<td>Alice</td>
+<td>Seattle</td>
+</tr>
+</tbody>
+</table>
+<p>➡ Alice moves to Denver<br />
+→ Updated record (no history)</p>
+<table>
+<thead>
+<tr>
+<th>customer_key</th>
+<th>name</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>501</td>
+<td>Alice</td>
+<td>Denver</td>
+</tr>
+</tbody>
+</table>
+<p>✅ Simple<br />
+❌ No history</p>
+<hr />
+<h3 id="type-2-add-new-record">🟦 Type 2 – Add New Record</h3>
+<p>Old record is retained; new record is added with a new surrogate key.</p>
+<table>
+<thead>
+<tr>
+<th>customer_key</th>
+<th>name</th>
+<th>city</th>
+<th>start_date</th>
+<th>end_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>501</td>
+<td>Alice</td>
+<td>Seattle</td>
+<td>2022-01-01</td>
+<td>2023-04-01</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Alice</td>
+<td>Denver</td>
+<td>2023-04-02</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>✅ Keeps history<br />
+❌ Grows table size  </p>
+<hr />
+<h3 id="type-3-add-new-column">🟨 Type 3 – Add New Column</h3>
+<p>Store both old and new values in same record.</p>
+<table>
+<thead>
+<tr>
+<th>customer_key</th>
+<th>name</th>
+<th>old_city</th>
+<th>current_city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>501</td>
+<td>Alice</td>
+<td>Seattle</td>
+<td>Denver</td>
+</tr>
+</tbody>
+</table>
+<p>✅ Simple and compact<br />
+❌ Only one level of history  </p>
+<hr />
+<h2 id="summary-table">Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>History Preserved?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type 1</td>
+<td>Overwrite old data</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Type 2</td>
+<td>Add new record</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Type 3</td>
+<td>Add new column</td>
+<td>⚠️ Partial</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="which-type-to-use">Which Type to Use?</h2>
+<ul>
+<li><strong>Type 1</strong> → When changes are unimportant (e.g., typo fix)</li>
+<li><strong>Type 2</strong> → When tracking history is critical (e.g., address, department)</li>
+<li><strong>Type 3</strong> → When limited history is acceptable (e.g., current vs previous)</li>
+</ul>
+<p>Why are SCDs important?:</p>
+<p>Historical tracking: They allow you to track changes over time, which helps with accurate reporting and analysis. 
+For example, you can analyze a store's sales by its region before and after a reorganization.</p>
+<p>Data integrity: They ensure that historical data remains accurate, preventing metrics from becoming unreliable as dimensions change.</p>
+<p>Business insights: By capturing historical context, businesses can connect performance changes to the specific attribute versions that were in effect at the time. </p>
 
 
 
@@ -612,10 +935,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
