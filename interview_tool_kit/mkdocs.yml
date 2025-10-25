@@ -11,3 +11,9 @@ nav:
   - SQL: sql.md
   - Projects: projects.md
   - Real World Interview Questions: actual_interview_questions.md
+  - Data Modeling:
+      - OLTP vs OLAP: data_modeling/oltp_vs_olap.md
+      - Star Schema: data_modeling/star_schema.md
+      - Snowflake Schema: data_modeling/snowflake_schema.md
+      - Dimension & Fact Tables: data_modeling/fact_dimension_tables.md
+      - Slowly Changing Dimensions (SCDs): data_modeling/scd_types.md
