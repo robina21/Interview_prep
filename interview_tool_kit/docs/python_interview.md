@@ -22,6 +22,10 @@ a, b = b, a
 **Q5. What's the difference between append and extend ?**
 -  Append adds object to the end of list = [1,2,3,[4,5]]
 -  Extend adds individual objects to the list at the end
+
+What is the difference between Python Arrays and lists?
+Arrays in python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
+Lists in python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.
 ---
 
 
