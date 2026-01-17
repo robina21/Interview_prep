@@ -329,6 +329,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#data-analysis-pandas-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Data Analysis (Pandas / NumPy)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data-loading-exploration" class="md-nav__link">
     <span class="md-ellipsis">
       📥 Data Loading &amp; Exploration
@@ -687,6 +696,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#data-analysis-pandas-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Data Analysis (Pandas / NumPy)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data-loading-exploration" class="md-nav__link">
     <span class="md-ellipsis">
       📥 Data Loading &amp; Exploration
@@ -793,6 +811,17 @@
 
 
 <h1 id="pandas-interview-questions-for-data-engineers-with-explanations">Pandas Interview Questions for Data Engineers (with Explanations)</h1>
+<h2 id="data-analysis-pandas-numpy">📊 Data Analysis (Pandas / NumPy)</h2>
+<p><strong>Q13. How do you handle missing data in pandas?</strong></p>
+<pre><code class="language-python">df.dropna(), df.fillna(0)
+</code></pre>
+<p><strong>Q14. How to group data in pandas?</strong></p>
+<pre><code class="language-python">df.groupby('column').agg({'sales': 'sum'})
+</code></pre>
+<p><strong>Q15. How to filter rows in a DataFrame?</strong></p>
+<pre><code class="language-python">df[df['value'] &gt; 100]
+</code></pre>
+<hr />
 <h2 id="data-loading-exploration">📥 Data Loading &amp; Exploration</h2>
 <p><strong>Q1. How do you read a large CSV file in chunks using Pandas?</strong><br />
 Use <code>chunksize</code> to load the file in smaller parts to save memory.</p>
@@ -810,6 +839,10 @@ df.head()
 Use <code>isnull().sum()</code> to count nulls per column.</p>
 <pre><code class="language-python">df.isnull().sum()
 </code></pre>
+<p>Difference between loc and iloc?</p>
+<p>Answer:
+loc is label-based indexing.
+iloc is position-based indexing.</p>
 <hr />
 <h2 id="data-cleaning">🧹 Data Cleaning</h2>
 <p><strong>Q4. How to drop rows with any null values?</strong><br />
@@ -901,6 +934,9 @@ Compare with <code>.equals()</code> or find differences using <code>concat()</co
 pd.concat([df1, df2]).drop_duplicates(keep=False)
 </code></pre>
 <hr />
+<p>How do you read large files in Pandas?</p>
+<p>Answer:
+Using chunk size to read data in smaller parts.</p>
 <h2 id="interview-tips">✅ Interview Tips</h2>
 <ul>
 <li>Practice real-world data cleanup and profiling.</li>

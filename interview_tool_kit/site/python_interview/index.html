@@ -312,41 +312,29 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-handling-error-handling" class="md-nav__link">
+    <nav class="md-nav" aria-label="🧠 Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immutable-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      🗃️ File Handling &amp; Error Handling
+      Immutable Data Types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#data-analysis-pandas-numpy" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#mutable-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Data Analysis (Pandas / NumPy)
+      Mutable Data Types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-topics-for-data-engineering" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠️ Advanced Topics for Data Engineering
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-for-interviews" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Tips for Interviews
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -648,41 +636,29 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-handling-error-handling" class="md-nav__link">
+    <nav class="md-nav" aria-label="🧠 Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immutable-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      🗃️ File Handling &amp; Error Handling
+      Immutable Data Types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#data-analysis-pandas-numpy" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#mutable-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Data Analysis (Pandas / NumPy)
+      Mutable Data Types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-topics-for-data-engineering" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠️ Advanced Topics for Data Engineering
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-for-interviews" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Tips for Interviews
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -704,28 +680,85 @@
 
 <h1 id="python-interview-questions-for-data-engineers">Python Interview Questions for Data Engineers</h1>
 <h2 id="basics">🧠 Basics</h2>
-<p><strong>Q1. What are Python's key features?</strong><br />
-- Interpreted, dynamically typed, object-oriented, open-source, and has extensive libraries.</p>
+<p>Data Types in Python:
+Python offers numerous built-in data types that provide varying functionalities and utilities.</p>
+<h3 id="immutable-data-types">Immutable Data Types</h3>
+<ol>
+<li><strong>int</strong> – Whole numbers like <code>42</code></li>
+<li><strong>float</strong> – Decimal numbers like <code>3.14</code></li>
+<li><strong>complex</strong> – Real + imaginary parts, e.g., <code>3+4j</code></li>
+<li><strong>bool</strong> – <code>True</code> or <code>False</code></li>
+<li><strong>str</strong> – Unicode characters</li>
+<li><strong>tuple</strong> – Ordered, immutable collection</li>
+<li><strong>frozenset</strong> – Immutable set</li>
+<li><strong>bytes</strong> – Immutable byte sequence</li>
+<li><strong>bytearray</strong> – Mutable bytes</li>
+<li><strong>NoneType</strong> – Represents no value</li>
+</ol>
+<hr />
+<h3 id="mutable-data-types">Mutable Data Types</h3>
+<ol>
+<li><strong>list</strong> – Ordered, dynamic collection</li>
+<li><strong>set</strong> – Unique, unordered values</li>
+<li><strong>dict</strong> – Key–value pairs</li>
+<li><strong>memoryview</strong> – View memory buffers</li>
+<li><strong>array</strong> – Typed array</li>
+<li><strong>deque</strong> – Double‑ended queue</li>
+<li><strong>object</strong> – Root of all Python classes</li>
+<li><strong>SimpleNamespace</strong> – Flexible attribute storage</li>
+<li><strong>ModuleType</strong> – Module object</li>
+<li><strong>FunctionType</strong> – Function object</li>
+</ol>
 <p><strong>Q2. What’s the difference between <code>is</code> and <code>==</code> in Python?</strong><br />
-- <code>==</code> compares values, <code>is</code> checks identity (memory location).</p>
-<p><strong>Q3. How do you swap two variables without a temporary variable?</strong></p>
-<pre><code class="language-python">a, b = b, a
-</code></pre>
+- <code>==</code> compares values, <code>is</code> checks identity (memory location).
+is: Compares the memory address or identity of two objects.
+==: Compares the content or value of two objects.</p>
 <p><strong>Q4. What's the difference between a list and a tuple?</strong><br />
-- Lists are mutable; tuples are immutable and faster.</p>
+- Lists are mutable; tuples are immutable and faster.
+Lists are ideal for collections that may change in size and content. They are the preferred choice for storing data elements.</p>
+<p>Tuples, due to their immutability and enhanced performance, are a good choice for representing fixed sets of related data.</p>
 <p><strong>Q5. What's the difference between append and extend ?</strong>
 -  Append adds object to the end of list = [1,2,3,[4,5]]
 -  Extend adds individual objects to the list at the end</p>
-<p>What is the difference between Python Arrays and lists?
+<p><strong>What is the difference between Python Arrays and lists?</strong>
 Arrays in python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
 Lists in python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.</p>
-<hr />
-<h2 id="file-handling-error-handling">🗃️ File Handling &amp; Error Handling</h2>
+<p><strong>kwargs and args</strong>
+In Python, <em>args and </em>*kwargs are often used to pass a variable number of arguments to a function.</p>
+<p><em>args collects a variable number of positional arguments into a tuple, while </em>*kwargs does the same for keyword arguments into a dictionary.</p>
+<p>The name <em>args is a convention. The asterisk (</em>) tells Python to put any remaining positional arguments it receives into a tuple.</p>
+<p>The double asterisk (**) is used to capture keyword arguments and their values into a dictionary.</p>
+<p>args:
+ def sum_all(*args):
+    result = 0
+    for num in args:
+        result += num
+    return result</p>
+<p>print(sum_all(1, 2, 3, 4))  # Output: 10</p>
+<p>kwargs:
+ def print_values(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")</p>
+<h1 id="keyword-arguments-are-captured-as-a-dictionary">Keyword arguments are captured as a dictionary</h1>
+<h2 id="print_valuesnamejohn-age30-citynew-york">print_values(name="John", age=30, city="New York")</h2>
+<h2 id="advanced-topics-for-data-engineering">🛠️ Advanced Topics for Data Engineering</h2>
 <p><strong>Q11. How to read a file line by line?</strong></p>
 <pre><code class="language-python">with open('file.txt') as f:
     for line in f:
         print(line)
 </code></pre>
+<pre><code>
+**Q21. How do you read a large file without loading into memory?**
+```python
+with open('large.csv') as f:
+    for line in f:
+        process(line)
+</code></pre>
+<pre><code class="language-python">with open('large.csv') as f:
+    for line in f:
+        process(line)
+</code></pre>
+<p>`3ř</p>
 <p><strong>Q12. How does Python handle exceptions?</strong></p>
 <pre><code class="language-python">try:
     1/0
@@ -733,40 +766,6 @@ except ZeroDivisionError:
     print(&quot;Cannot divide by zero&quot;)
 </code></pre>
 <hr />
-<h2 id="data-analysis-pandas-numpy">📊 Data Analysis (Pandas / NumPy)</h2>
-<p><strong>Q13. How do you handle missing data in pandas?</strong></p>
-<pre><code class="language-python">df.dropna(), df.fillna(0)
-</code></pre>
-<p><strong>Q14. How to group data in pandas?</strong></p>
-<pre><code class="language-python">df.groupby('column').agg({'sales': 'sum'})
-</code></pre>
-<p><strong>Q15. How to filter rows in a DataFrame?</strong></p>
-<pre><code class="language-python">df[df['value'] &gt; 100]
-</code></pre>
-<hr />
-<h2 id="advanced-topics-for-data-engineering">🛠️ Advanced Topics for Data Engineering</h2>
-<p><strong>Q20. What is a Python decorator?</strong></p>
-<pre><code class="language-python">def decorator(func):
-    def wrapper():
-        print(&quot;Before&quot;)
-        func()
-        print(&quot;After&quot;)
-    return wrapper
-</code></pre>
-<p><strong>Q21. How do you read a large file without loading into memory?</strong></p>
-<pre><code class="language-python">with open('large.csv') as f:
-    for line in f:
-        process(line)
-</code></pre>
-<p><strong>Q22. What is the GIL in Python?</strong><br />
-- Global Interpreter Lock prevents multiple native threads from executing Python bytecodes at once.</p>
-<hr />
-<h2 id="tips-for-interviews">✅ Tips for Interviews</h2>
-<ul>
-<li>Focus on writing clean and readable code</li>
-<li>Know common libraries: <code>pandas</code>, <code>numpy</code>, <code>collections</code>, <code>itertools</code></li>
-<li>Be able to explain your reasoning out loud</li>
-</ul>
 
 
 
