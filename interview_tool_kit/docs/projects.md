@@ -1,20 +1,14 @@
-Work In progress 
-
-Roche:
-Worked on Roche billing dashboards, cost optimisation, cost allocation etc 
-Brought data from Redshift into Tableau and built dashboards on it to present to clients
-Automated Billing reports from redshift and sent via an email. 
-Built queries to visualise data 
-
-Deloitte:
-Worked on Data migration projects Brining data from oracle to snowflake 
-
 # Data Engineering Projects
 
-This page is written in clean **MkDocs‑friendly Markdown** so you can paste it directly into your site (for example: `docs/projects.md`).
+### Health Care Triangle Projects [ROCHE]:
+- Developed Roche billing and cost optimization dashboards in Tableau for client reporting and decision-making.
+- Extracted and modeled data from Amazon Redshift to support analytics and visualization.
+- Designed and optimized SQL queries for accurate billing insights and trend analysis.
+- Automated recurring billing reports from Redshift and delivered them to clients via scheduled emails.
+- Improved reporting efficiency and reduced manual effort through automation.
 
 ---
-
+### Deloitte Projects
 ## **Project 1 — Oracle → Azure Data Factory → Snowflake (Care First)**
 
 ### Objective  
@@ -106,18 +100,15 @@ Analyze source systems and define a clean, duplicate‑free loading strategy.
 
 ---
 
-### How to add this to MkDocs
 
-1. Save this file as:
-```
-docs/projects.md
-```
+## Genentech
 
-2. Update `mkdocs.yml`:
-```yaml
-nav:
-  - Home: index.md
-  - Python Interviews: python-interview.md
-  - Projects: projects.md
-```
-
+- Designed and orchestrated end-to-end ETL workflows using AWS Step Functions to manage multi-step data pipelines.
+- Developed and deployed Talend-based ETL pipelines for AWS cloud environments.
+- Built and managed AWS Glue ETL jobs for data ingestion, transformation, and quality validation.
+- Implemented custom data quality checks and schema evolution in AWS Glue to ensure reliable analytics.
+- Designed automated sensitive data detection workflows using AWS Macie for data governance and compliance.
+- Loaded and optimized datasets in Amazon Redshift Serverless for reporting and analytics.
+- Developed complex Spark SQL and PySpark transformations for large-scale data processing.
+- Migrated data from on-prem FTP servers to PostgreSQL as part of cloud modernization.
+- Established reusable data quality frameworks for enterprise ETL pipelines.
