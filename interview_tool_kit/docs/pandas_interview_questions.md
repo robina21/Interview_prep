@@ -1,6 +1,26 @@
 
 # Pandas Interview Questions for Data Engineers (with Explanations)
 
+
+## 📊 Data Analysis (Pandas / NumPy)
+
+**Q13. How do you handle missing data in pandas?**
+```python
+df.dropna(), df.fillna(0)
+```
+
+**Q14. How to group data in pandas?**
+```python
+df.groupby('column').agg({'sales': 'sum'})
+```
+
+**Q15. How to filter rows in a DataFrame?**
+```python
+df[df['value'] > 100]
+```
+
+---
+
 ## 📥 Data Loading & Exploration
 
 **Q1. How do you read a large CSV file in chunks using Pandas?**  
@@ -24,6 +44,12 @@ Use `isnull().sum()` to count nulls per column.
 ```python
 df.isnull().sum()
 ```
+
+Difference between loc and iloc?
+
+Answer:
+loc is label-based indexing.
+iloc is position-based indexing.
 
 ---
 
@@ -168,6 +194,11 @@ pd.concat([df1, df2]).drop_duplicates(keep=False)
 ```
 
 ---
+
+How do you read large files in Pandas?
+
+Answer:
+Using chunk size to read data in smaller parts.
 
 ## ✅ Interview Tips
 
