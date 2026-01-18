@@ -1,6 +1,6 @@
 # Data Engineering Projects
 
-### Health Care Triangle Projects [ROCHE]:
+## **Health Care Triangle Projects [ROCHE]**
 - Developed Roche billing and cost optimization dashboards in Tableau for client reporting and decision-making.
 - Extracted and modeled data from Amazon Redshift to support analytics and visualization.
 - Designed and optimized SQL queries for accurate billing insights and trend analysis.
@@ -8,8 +8,8 @@
 - Improved reporting efficiency and reduced manual effort through automation.
 
 ---
-### Deloitte Projects
-## **Project 1 — Oracle → Azure Data Factory → Snowflake (Care First)**
+## **Deloitte Projects**
+### **Project 1 — Oracle → Azure Data Factory → Snowflake (Care First)**
 
 ### Objective  
 Migrate historical data from **Oracle to Snowflake** using **Azure Data Factory (ADF)** with a SQL Server control layer for orchestration and tracking.
@@ -40,7 +40,7 @@ Migrate historical data from **Oracle to Snowflake** using **Azure Data Factory 
 
 ---
 
-## **Project 2 — Oracle → AWS (Centene)**
+### Project 2 — Oracle → AWS (Centene)
 
 ### Objective
 Build an automated ingestion framework to move data from **Oracle to AWS Redshift** using AWS Glue and S3.
@@ -76,7 +76,7 @@ Build an automated ingestion framework to move data from **Oracle to AWS Redshif
 
 ---
 
-## **Project 3 — Discovery & Data Mapping (Exploratory Project)**
+### Project 3 — Discovery & Data Mapping (Exploratory Project)
 
 ### Objective
 Analyze source systems and define a clean, duplicate‑free loading strategy.
@@ -101,7 +101,7 @@ Analyze source systems and define a clean, duplicate‑free loading strategy.
 ---
 
 
-## Genentech
+### **Genentech Projects**
 
 - Designed and orchestrated end-to-end ETL workflows using AWS Step Functions to manage multi-step data pipelines.
 - Developed and deployed Talend-based ETL pipelines for AWS cloud environments.
