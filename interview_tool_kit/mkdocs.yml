@@ -9,6 +9,7 @@ nav:
       - Basics: python_interview.md
       - Pandas Interview: pandas_interview_questions.md
   - SQL: sql.md
+  - PySpark: pyspark_interview_questions.md
   - Projects: projects.md
   - Real World Interview Questions: actual_interview_questions.md
   - Data Modeling:

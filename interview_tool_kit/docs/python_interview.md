@@ -79,7 +79,7 @@ print(sum_all(1, 2, 3, 4))  # Output: 10
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
-# Keyword arguments are captured as a dictionary
+Keyword arguments are captured as a dictionary
 print_values(name="John", age=30, city="New York")
 ---
 
@@ -93,29 +93,12 @@ with open('file.txt') as f:
         print(line)
 ```
 
-```
-
 **Q21. How do you read a large file without loading into memory?**
-```python
-with open('large.csv') as f:
-    for line in f:
-        process(line)
-```
-
 
 ```python
 with open('large.csv') as f:
     for line in f:
         process(line)
-```
-`3ř
-
-**Q12. How does Python handle exceptions?**
-```python
-try:
-    1/0
-except ZeroDivisionError:
-    print("Cannot divide by zero")
 ```
 
 ---
