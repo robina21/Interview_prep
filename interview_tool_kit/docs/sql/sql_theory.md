@@ -38,3 +38,16 @@ HAVING → filters groups after aggregation
 👉 How would you handle this using SQL?
 “I would use incremental loading by identifying new or changed records using a timestamp column like last_updated or a unique ID. In SQL, I would filter source data where last_updated > last ETL run date and load only those rows. This reduces the volume of data processed and improves ETL performance.”
 
+> scd types
+
+SCD Type 1 – Overwrites data (no history)
+SCD Type 2 – Maintains full history
+SCD Type 3 – Limited history (column-based)
+
+Type 0 → Do nothing but keeps original data so nothing changes 
+
+Type 1 → Overwrite/Updates the existing record. Does NOT maintain historical data
+
+Type 2 → Add rows (keeps full history)
+
+Type 3 → Keeps current + previous value in separate columns(limited history)

@@ -12,6 +12,8 @@ nav:
   - PySpark: pyspark_interview_questions.md
   - Projects: projects.md
   - Real World Interview Questions: actual_interview_questions.md
+  - Databases:  
+      - redshift_spectrum.md
   - Data Modeling:
       - OLTP vs OLAP: data_modeling/oltp_vs_olap.md
       - Star Schema: data_modeling/star_schema.md

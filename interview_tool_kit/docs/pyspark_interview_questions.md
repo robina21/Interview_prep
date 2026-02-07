@@ -139,8 +139,8 @@ df = spark.read.parquet("s3://bucket/output/")
 Missing values (nulls) must be cleaned before analytics to avoid incorrect results.
 
 ```python
-df.dropna()
-df.fillna(0)
+df.dropna() drop duplicates
+df.fillna(0) fill with value
 df.fillna({"age": 30, "salary": 0})
 ```
 

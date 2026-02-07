@@ -54,3 +54,37 @@ I also check the execution plan to see if there are any full table scans and opt
 
 > why should you not index all columns 
 We don’t index all columns because indexes take additional storage and every insert, update, or delete operation also needs to update the index. Too many indexes slow down write performance and increase maintenance overhead. So we only index columns that are frequently used in joins, filters, and sorting.”
+
+> what are the different transformations have you done ?
+Trimming spaces, converting text to upper/lower case
+
+Handling missing values using defaults or conditional logic
+
+Filtering out invalid or rejected records
+
+> Data type conversions
+String to ---> date / timestamp conversions
+“I used CAST, CONVERT, CASE, and TRY_CAST to avoid runtime failures.”
+“I first check the format of the incoming string to ensure it matches the expected date format. For example, DD-MM-YYYY or YYYY-MM-DD.”
+
+TO_DATE(source_date, 'DD-MM-YYYY')
+in python/pandas
+df['target_date'] = pd.to_datetime(df['source_date'], format='%d-%m-%Y', errors='coerce')
+
+
+********** ANSWER THE BELOW ***********
+“If the source column is decimal but Athena expects an integer, I first check if it’s possible to safely cast or convert the type. If yes, I perform the conversion in Pandas or PySpark before loading, ensuring no data is lost. If casting isn’t feasible and the business allows, I load it as a string to avoid load errors. Throughout, I validate the data to make sure the transformation aligns with business requirements.”
+
+> joins & lookups
+I performed lookups and joins across multiple source systems
+
+>>>>>Current project
+
+I bring the data from s3 for example
+and do a virus scan [affected files)]
+since I work with healt care data we use a aws service called macie which will check for PHI/PII information and flag it
+then we get the data dict and get the data types and create tables and then load to redshift 
+
+then we do some dq checks 
+like checking for null vs empty
+consistency checks
