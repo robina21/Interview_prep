@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../data_modeling/scd_types/">
+      
+      
+        <link rel="next" href="../informatica/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Etl - Data Engineering Interview Prep</title>
+        <title>ETL - Data Engineering Interview Prep</title>
       
     
     
@@ -89,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Etl
+              ETL
             
           </span>
         </div>
@@ -297,9 +301,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../sql/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -308,7 +323,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Basics
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/sql_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -402,7 +475,7 @@
   
   
   <span class="md-ellipsis">
-    Data Modeling
+    Databases
     
   </span>
   
@@ -412,6 +485,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/redshift_spectrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redshift Spectrum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Modeling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Data Modeling
           </label>
@@ -539,6 +680,80 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ETL
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Informatica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tellmeaboutyourself/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tell me about yourself
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -571,7 +786,7 @@
 
 
 
-  <h1>Etl</h1>
+  <h1>ETL</h1>
 
 <p>How do you optimize ETL performance? </p>
 <blockquote>
@@ -620,7 +835,42 @@ Fewer rows → faster join
 <blockquote>
 <p>why should you not index all columns 
 We don’t index all columns because indexes take additional storage and every insert, update, or delete operation also needs to update the index. Too many indexes slow down write performance and increase maintenance overhead. So we only index columns that are frequently used in joins, filters, and sorting.”</p>
+<p>what are the different transformations have you done ?
+Trimming spaces, converting text to upper/lower case</p>
 </blockquote>
+<p>Handling missing values using defaults or conditional logic</p>
+<p>Filtering out invalid or rejected records</p>
+<blockquote>
+<p>Data type conversions
+String to ---&gt; date / timestamp conversions
+“I used CAST, CONVERT, CASE, and TRY_CAST to avoid runtime failures.”
+“I first check the format of the incoming string to ensure it matches the expected date format. For example, DD-MM-YYYY or YYYY-MM-DD.”</p>
+</blockquote>
+<p>TO_DATE(source_date, 'DD-MM-YYYY')
+in python/pandas
+df['target_date'] = pd.to_datetime(df['source_date'], format='%d-%m-%Y', errors='coerce')</p>
+<p><strong><em>*</em></strong><strong><em> ANSWER THE BELOW </em></strong><strong><em>*</em></strong>*
+“If the source column is decimal but Athena expects an integer, I first check if it’s possible to safely cast or convert the type. If yes, I perform the conversion in Pandas or PySpark before loading, ensuring no data is lost. If casting isn’t feasible and the business allows, I load it as a string to avoid load errors. Throughout, I validate the data to make sure the transformation aligns with business requirements.”</p>
+<blockquote>
+<p>joins &amp; lookups
+I performed lookups and joins across multiple source systems</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Current project</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>I bring the data from s3 for example
+and do a virus scan [affected files)]
+since I work with healt care data we use a aws service called macie which will check for PHI/PII information and flag it
+then we get the data dict and get the data types and create tables and then load to redshift </p>
+<p>then we do some dq checks 
+like checking for null vs empty
+consistency checks</p>
 
 
 

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../sql/">
+        <link rel="prev" href="../sql/sql_theory/">
       
       
         <link rel="next" href="../projects/">
@@ -306,9 +306,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../sql/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -317,7 +328,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Basics
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/sql_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -639,7 +708,7 @@
   
   
   <span class="md-ellipsis">
-    Data Modeling
+    Databases
     
   </span>
   
@@ -649,6 +718,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/redshift_spectrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redshift Spectrum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Modeling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Data Modeling
           </label>
@@ -772,6 +909,72 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ETL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informatica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Informatica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tellmeaboutyourself/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tell me about yourself
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1120,8 +1323,8 @@ PySpark provides a unified data source API to read/write structured data from fi
 <h2 id="8-how-do-you-handle-missing-or-null-values">8) How do you handle missing or null values?</h2>
 <p><strong>Definition:</strong><br />
 Missing values (nulls) must be cleaned before analytics to avoid incorrect results.</p>
-<pre><code class="language-python">df.dropna()
-df.fillna(0)
+<pre><code class="language-python">df.dropna() drop duplicates
+df.fillna(0) fill with value
 df.fillna({&quot;age&quot;: 30, &quot;salary&quot;: 0})
 </code></pre>
 <hr />

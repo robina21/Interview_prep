@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../databases/redshift_spectrum/">
+        <link rel="prev" href="../../pandas_interview_questions/">
       
       
-        <link rel="next" href="../star_schema/">
+        <link rel="next" href="../sql_theory/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>OLTP vs OLAP - Data Engineering Interview Prep</title>
+        <title>SQL Basics - Data Engineering Interview Prep</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oltp-vs-olap" class="md-skip">
+        <a href="#sql-interview-questions-for-data-engineers" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OLTP vs OLAP
+              SQL Basics
             
           </span>
         </div>
@@ -304,18 +304,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -331,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SQL
@@ -342,10 +344,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../sql/sql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SQL Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -356,6 +380,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Basic Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregations-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Aggregations &amp; Grouping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Joins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subqueries-ctes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Subqueries &amp; CTEs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#window-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪟 Window Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Miscellaneous
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -368,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql/sql_theory/" class="md-nav__link">
+      <a href="../sql_theory/" class="md-nav__link">
         
   
   
@@ -529,20 +627,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -558,7 +654,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Data Modeling
@@ -569,32 +665,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    OLTP vs OLAP
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../data_modeling/oltp_vs_olap/" class="md-nav__link">
         
   
   
@@ -605,35 +679,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -646,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../star_schema/" class="md-nav__link">
+      <a href="../../data_modeling/star_schema/" class="md-nav__link">
         
   
   
@@ -669,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snowflake_schema/" class="md-nav__link">
+      <a href="../../data_modeling/snowflake_schema/" class="md-nav__link">
         
   
   
@@ -692,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fact_dimension_tables/" class="md-nav__link">
+      <a href="../../data_modeling/fact_dimension_tables/" class="md-nav__link">
         
   
   
@@ -715,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scd_types/" class="md-nav__link">
+      <a href="../../data_modeling/scd_types/" class="md-nav__link">
         
   
   
@@ -831,9 +876,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#basic-queries" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      🧾 Basic Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregations-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Aggregations &amp; Grouping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Joins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subqueries-ctes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Subqueries &amp; CTEs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#window-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪟 Window Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Miscellaneous
     </span>
   </a>
   
@@ -855,70 +945,96 @@
 
 
 
-<h1 id="oltp-vs-olap">OLTP vs OLAP</h1>
-<p>OLTP(Online Transaction Processing):
-Purpose: To manage and process day-to-day transactions in real-time. </p>
-<p>Characteristics: 
-Optimized for high-volume, fast transactions involving small amounts of data per transaction (e.g., one record). 
-Focuses on the current state of the data. 
-Designed for frequent inserts, updates, and deletes. 
-Used by frontline workers and customers for operational tasks. 
-Examples: Banking transactions, e-commerce order processing, airline reservations. </p>
-<p>OLAP (Online Analytical Processing):
-Purpose: To enable complex analysis of large volumes of historical data. </p>
-<p>Characteristics:
-Optimized for complex, read-heavy queries that aggregate large amounts of data. 
-Focuses on historical and aggregated data to support business intelligence and decision-making. 
-Uses multidimensional data cubes to allow for "slicing," "dicing," and "pivoting" data. 
-Used by data analysts, data scientists, and business intelligence professionals. 
-Examples: Analyzing sales trends over several years, forecasting future sales, or identifying customer buying patterns. </p>
-<h2 id="overview">Overview</h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>OLTP (Online Transaction Processing)</th>
-<th>OLAP (Online Analytical Processing)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Purpose</strong></td>
-<td>Day-to-day operations</td>
-<td>Analytical insights and reporting</td>
-</tr>
-<tr>
-<td><strong>Data Type</strong></td>
-<td>Current, up-to-date data</td>
-<td>Historical, summarized data</td>
-</tr>
-<tr>
-<td><strong>Operations</strong></td>
-<td>Insert, Update, Delete</td>
-<td>Read, Aggregate, Analyze</td>
-</tr>
-<tr>
-<td><strong>Users</strong></td>
-<td>Clerks, Frontline staff</td>
-<td>Analysts, Decision-makers</td>
-</tr>
-<tr>
-<td><strong>Schema</strong></td>
-<td>Normalized (3NF)</td>
-<td>Denormalized (Star/Snowflake)</td>
-</tr>
-<tr>
-<td><strong>Query Speed</strong></td>
-<td>Fast for small reads/writes</td>
-<td>Optimized for large aggregations</td>
-</tr>
-<tr>
-<td><strong>Examples</strong></td>
-<td>Banking, e-commerce transactions</td>
-<td>Data warehouses, dashboards</td>
-</tr>
-</tbody>
-</table>
+<h1 id="sql-interview-questions-for-data-engineers">SQL Interview Questions for Data Engineers</h1>
+<h2 id="basic-queries">🧾 Basic Queries</h2>
+<p><strong>Q1. What is the difference between <code>WHERE</code> and <code>HAVING</code>?</strong><br />
+- <code>WHERE</code> filters rows before grouping; <code>HAVING</code> filters groups after aggregation.</p>
+<p><strong>Q2. How do you fetch only unique values from a column?</strong>  </p>
+<pre><code class="language-sql">SELECT DISTINCT column_name FROM table_name;
+</code></pre>
+<p><strong>Q3. How to get the second highest salary from an employee table?</strong>  </p>
+<pre><code class="language-sql">SELECT MAX(salary) FROM employees
+WHERE salary &lt; (SELECT MAX(salary) FROM employees);
+</code></pre>
+<p><strong>Q4. How do you rename a column in the result set?</strong>  </p>
+<pre><code class="language-sql">SELECT column_name AS new_name FROM table_name;
+</code></pre>
+<hr />
+<h2 id="aggregations-grouping">🧮 Aggregations &amp; Grouping</h2>
+<p><strong>Q5. How to count the number of employees per department?</strong>  </p>
+<pre><code class="language-sql">SELECT department, COUNT(*) FROM employees GROUP BY department;
+</code></pre>
+<p><strong>Q6. How to calculate average salary by job role?</strong>  </p>
+<pre><code class="language-sql">SELECT job_role, AVG(salary) FROM employees GROUP BY job_role;
+</code></pre>
+<p><strong>Q7. How to filter groups with more than 10 employees?</strong>  </p>
+<pre><code class="language-sql">SELECT department, COUNT(*) FROM employees
+GROUP BY department
+HAVING COUNT(*) &gt; 10;
+</code></pre>
+<hr />
+<h2 id="joins">🔗 Joins</h2>
+<p><strong>Q8. What’s the difference between INNER JOIN and LEFT JOIN?</strong><br />
+- <code>INNER JOIN</code> returns matching rows; <code>LEFT JOIN</code> returns all from left + matches.</p>
+<p><strong>Q9. How to get employees and their department names?</strong>  </p>
+<pre><code class="language-sql">SELECT e.name, d.name
+FROM employees e
+JOIN departments d ON e.dept_id = d.id;
+</code></pre>
+<p><strong>Q10. How to find employees without a manager (using LEFT JOIN)?</strong>  </p>
+<pre><code class="language-sql">SELECT e.name FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.id
+WHERE m.id IS NULL;
+</code></pre>
+<hr />
+<h2 id="subqueries-ctes">📐 Subqueries &amp; CTEs</h2>
+<p><strong>Q11. What is a CTE and when would you use it?</strong><br />
+- A Common Table Expression makes complex queries more readable and reusable.</p>
+<p><strong>Q12. Write a query using a CTE to get top 5 salaries.</strong>  </p>
+<pre><code class="language-sql">WITH ranked AS (
+  SELECT name, salary,
+         DENSE_RANK() OVER (ORDER BY salary DESC) AS rank
+  FROM employees
+)
+SELECT * FROM ranked WHERE rank &lt;= 5;
+</code></pre>
+<p><strong>Q13. How to use a correlated subquery?</strong>  </p>
+<pre><code class="language-sql">SELECT name FROM employees e
+WHERE salary &gt; (SELECT AVG(salary) FROM employees WHERE department = e.department);
+</code></pre>
+<hr />
+<h2 id="window-functions">🪟 Window Functions</h2>
+<p><strong>Q14. How to calculate running total of salaries?</strong>  </p>
+<pre><code class="language-sql">SELECT name, salary,
+       SUM(salary) OVER (ORDER BY name) AS running_total
+FROM employees;
+</code></pre>
+<p><strong>Q15. How to get each employee’s rank based on salary within department?</strong>  </p>
+<pre><code class="language-sql">SELECT name, department,
+       RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS dept_rank
+FROM employees;
+</code></pre>
+<hr />
+<h2 id="miscellaneous">📋 Miscellaneous</h2>
+<p><strong>Q16. What’s the difference between <code>UNION</code> and <code>UNION ALL</code>?</strong><br />
+- <code>UNION</code> removes duplicates, <code>UNION ALL</code> includes all.</p>
+<p><strong>Q17. How to get rows between two dates?</strong>  </p>
+<pre><code class="language-sql">SELECT * FROM orders
+WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31';
+</code></pre>
+<p><strong>Q18. How to delete duplicate records but keep one?</strong>  </p>
+<pre><code class="language-sql">DELETE FROM employees
+WHERE id NOT IN (
+  SELECT MIN(id)
+  FROM employees
+  GROUP BY name, department
+);
+</code></pre>
+<p><strong>Q19. What are indexes and why are they used?</strong><br />
+- Indexes speed up read queries by allowing faster lookup but slow down inserts/updates.</p>
+<p><strong>Q20. How to find null values in a column?</strong>  </p>
+<pre><code class="language-sql">SELECT * FROM employees WHERE manager_id IS NULL;
+</code></pre>
 
 
 
